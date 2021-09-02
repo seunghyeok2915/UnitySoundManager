@@ -92,11 +92,11 @@ public class SoundManager : MonoBehaviour
 
     private AudioSource MakeAudioSourceObject(string name)
     {
-        GameObject Object = new GameObject();
-        Object.name = name;
-        Object.transform.SetParent(gameObject.transform);
+        GameObject audioObject = new GameObject();
+        audioObject.name = name;
+        audioObject.transform.SetParent(gameObject.transform);
 
-        return Object.AddComponent<AudioSource>();
+        return audioObject.AddComponent<AudioSource>();
     }
 
     private void SetAudioSource(AudioSource audioSource, AudioClip audioClip, bool isLoop, float volume, bool isMute = false)
